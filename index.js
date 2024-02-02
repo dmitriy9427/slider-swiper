@@ -2,31 +2,30 @@ let swiperEl = new Swiper(".swiper", {
   loop: true,
   speed: 400,
   grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 4.8,
+  spaceBetween: 20,
   breakpoints: {
     1280: {
       slidesPerView: 4,
-      spaceBetween: 20,
     },
 
     960: {
-      slidesPerView: 4,
+      spaceBetween: 18,
     },
 
     768: {
       slidesPerView: 3,
     },
-    668: {
-      slidesPerView: 2.5,
-    },
 
-    600: {
+    500: {
       slidesPerView: 2.5,
     },
-    550: {
+    350: {
       slidesPerView: 2,
     },
-    450: {
-      slidesPerView: 1.5,
+    320: {
+      slidesPerView: 1.8,
     },
   },
 
@@ -40,6 +39,14 @@ let swiperEl = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+swiper.on("resize", function () {
+  swiper.update();
+  swiper.slideTo(swiper.activeIndex, 0, false);
+});
+swiper.on("slideChange", function () {
+  swiper.update();
 });
 
 const sliderItems = document.querySelectorAll(".slider__item");
