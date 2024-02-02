@@ -256,7 +256,6 @@ header .header-list {
 
   @media (max-width: 500px) {
     padding: 0 40px 20px;
-    bottom: 90px;
   }
 }
 
