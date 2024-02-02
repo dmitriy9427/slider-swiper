@@ -3,11 +3,10 @@ let swiperEl = new Swiper(".swiper", {
   speed: 400,
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 4.8,
   spaceBetween: 20,
   breakpoints: {
     1280: {
-      slidesPerView: 4,
+      slidesPerView: 4.5,
     },
 
     960: {
