@@ -15,10 +15,10 @@ next.addEventListener("click", () => {
 });
 
 prev.addEventListener("click", () => {
+  itemActive = itemActive - 1;
   if (itemActive < 0) {
     itemActive = countItem;
   }
-  itemActive = itemActive - 1;
 
   showSlider();
 });
