@@ -245,13 +245,14 @@ header .header-list {
 .swiper {
   display: flex;
   z-index: 11;
-  padding: 0 50px 40px;
+  padding: 0 0 40px;
   justify-content: start;
-  position: absolute;
   bottom: 50px;
-  right: 70px;
-  height: 230px;
   width: 90%;
+  position: relative;
+  bottom: 250px;
+  height: 230px;
+  margin: 0 auto;
 
   @media (max-width: 500px) {
     padding: 0 40px 20px;

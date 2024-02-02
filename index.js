@@ -2,10 +2,10 @@ let swiperEl = new Swiper(".swiper", {
   loop: true,
   speed: 400,
   grabCursor: true,
-
   breakpoints: {
     1280: {
-      slidesPerView: 4.5,
+      slidesPerView: 4,
+      spaceBetween: 20,
     },
 
     960: {
@@ -20,17 +20,13 @@ let swiperEl = new Swiper(".swiper", {
     },
 
     600: {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
     },
     550: {
       slidesPerView: 2,
     },
-    500: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    360: {
-      spaceBetween: 0,
+    450: {
+      slidesPerView: 1.5,
     },
   },
 
