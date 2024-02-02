@@ -29,6 +29,9 @@ let swiperEl = new Swiper(".swiper", {
       slidesPerView: 1,
       spaceBetween: 20,
     },
+    360: {
+      spaceBetween: 0,
+    },
   },
 
   pagination: {
