@@ -256,6 +256,7 @@ header .header-list {
 .swiper-slide {
   margin: 0 auto;
   width: 0;
+  text-align: center;
 }
 
 .swiper-pagination-bullet {
@@ -280,6 +281,7 @@ header .header-list {
 }
 
 .swiper-list__item {
+  text-align: center;
   position: relative;
   width: 180px;
   height: 100%;
@@ -294,7 +296,7 @@ header .header-list {
 .swiper-list__item div {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 19%;
   background-color: rgb(87, 69, 69);
   width: 180px;
   padding: 5px 10px;
