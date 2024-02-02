@@ -3,15 +3,12 @@ let swiperEl = new Swiper(".swiper", {
   speed: 400,
   grabCursor: true,
   centeredSlides: true,
-  spaceBetween: 20,
   breakpoints: {
     1280: {
       slidesPerView: 4.5,
     },
 
-    960: {
-      spaceBetween: 18,
-    },
+    960: {},
 
     768: {
       slidesPerView: 3,
@@ -38,14 +35,6 @@ let swiperEl = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
-
-swiper.on("resize", function () {
-  swiper.update();
-  swiper.slideTo(swiper.activeIndex, 0, false);
-});
-swiper.on("slideChange", function () {
-  swiper.update();
 });
 
 const sliderItems = document.querySelectorAll(".slider__item");

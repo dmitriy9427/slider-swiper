@@ -254,7 +254,8 @@ header .header-list {
   margin: 0 auto;
 }
 .swiper-slide {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   width: 0;
   text-align: center;
 }
@@ -272,7 +273,7 @@ header .header-list {
 .swiper-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .swiper-button-next,
@@ -296,7 +297,6 @@ header .header-list {
 .swiper-list__item div {
   position: absolute;
   bottom: 0;
-  left: 12.5%;
   background-color: rgb(87, 69, 69);
   width: 180px;
   padding: 5px 10px;
