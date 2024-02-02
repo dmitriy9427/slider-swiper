@@ -14,14 +14,14 @@ body {
   max-width: 1280px;
   min-width: 320px;
   margin: 0 auto;
-  height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-.active {
-  opacity: 1;
-  z-index: 10;
+main {
+  position: relative;
+  height: 100%;
 }
 
 /* --> HEADER STYLES <--  */
@@ -31,18 +31,25 @@ header {
   grid-template-columns: 0.5fr 1fr 0.2fr;
   color: white;
   align-items: center;
-  margin-top: 30px;
   width: 90%;
   margin: 0 auto;
   position: relative;
   z-index: 100;
+  padding-top: 30px;
 
   @media (max-width: 500px) {
     justify-content: space-between;
   }
 }
 
+.header__logo {
+}
+
 .header__logo img {
+  width: 60px;
+  height: 60px;
+
+  color: antiquewhite;
   @media (max-width: 500px) {
     width: 35px;
     height: 35px;
@@ -124,7 +131,7 @@ header .header-list {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 .slider-content {
@@ -133,6 +140,21 @@ header .header-list {
   left: 15%;
   color: white;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    left: 20%;
+  }
+
+  @media (max-width: 700px) {
+    left: 25%;
+  }
+  @media (max-width: 480px) {
+    left: 30%;
+  }
+
+  @media (max-width: 380px) {
+    left: 35%;
+  }
 }
 
 .slider__header {
@@ -151,7 +173,7 @@ header .header-list {
     font-size: 70px;
   }
 
-  @media (max-width: 385px) {
+  @media (max-width: 425px) {
     font-size: 40px;
   }
 }
@@ -159,16 +181,11 @@ header .header-list {
 .slider-content__paragraph {
   font-size: 20px;
   font-weight: 300;
-  margin-top: 0px;
-
-  @media (max-width: 385px) {
-    margin-top: 24px;
-  }
 }
 
 @keyframes showContent {
   to {
-    transform: translateY(0);
+    transform: translateX(-100px);
     filter: blur(0);
     opacity: 1;
   }
@@ -182,7 +199,7 @@ header .header-list {
 .slider__item.active .slider__header,
 .slider__item.active .slider-content__title,
 .slider__item.active .slider-content__paragraph {
-  transform: translateY(-100px);
+  transform: translateX(-400px);
   filter: blur(20px);
   opacity: 0;
   animation: showContent 0.3s 0.6s ease-in-out 1 forwards;
@@ -235,12 +252,23 @@ header .header-list {
   justify-content: start;
   position: absolute;
   bottom: 50px;
+  right: 70px;
   height: 230px;
-  width: 70%;
+  width: 90%;
 
   @media (max-width: 500px) {
     width: 80%;
   }
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(255, 255, 255);
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(127, 127, 241);
 }
 
 .swiper-wrapper {

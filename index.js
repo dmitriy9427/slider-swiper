@@ -7,23 +7,27 @@ let swiperEl = new Swiper(".swiper", {
     1280: {
       slidesPerView: 4.5,
     },
-    1260: {
+
+    960: {
       slidesPerView: 4,
     },
-    1160: {
-      slidesPerView: 4,
-    },
-    900: {
+
+    768: {
       slidesPerView: 3,
     },
-    868: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2,
-    },
     668: {
+      slidesPerView: 2.5,
+    },
+
+    600: {
+      slidesPerView: 2,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    500: {
       slidesPerView: 1,
+      spaceBetween: 20,
     },
   },
 
@@ -60,7 +64,6 @@ prev.addEventListener("click", () => {
     itemActive = countItem;
   }
   itemActive = itemActive - 1;
-  console.log(itemActive);
 
   showSlider();
 });
@@ -74,3 +77,10 @@ function showSlider() {
   sliderItems[itemActive].classList.add("active");
   swiperItems[itemActive].classList.add("active");
 }
+
+swiperItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    itemActive = index;
+    showSlider();
+  });
+});
